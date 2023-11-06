@@ -1,0 +1,236 @@
+.section__partenaires{
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100vw;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+
+    .title__partenaires{
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: -3px;
+        font-family: $openSans;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: $mainBlue;
+        border-bottom: solid 3px $mainYellow;
+    }
+
+    .partenaires__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: 80vw;
+
+        &>a:first-of-type{
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(2){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAPCLIMAT.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(3){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CLOUET.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(4){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/FERRON.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(5){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(6){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/VAND.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(7){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/BREIZHCOLA.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(8){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAVE.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(9){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/COOC.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(10){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/DENUAL.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(11){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/GROUPAMA.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(12){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/LMCONSTRUCTION.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(13){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLAZA.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(14){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLOMBREIZH.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(15){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/ROUSSEL.jpeg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(16){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/SAFE.png);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(17){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/SUPERU.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(18){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/T&C.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:nth-of-type(19){
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/TIRIAULT.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:last-of-type{
+            background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/VOUSFINANCER.jpg);
+            background-size: 150px auto;
+            background-repeat: no-repeat;
+            height: 12rem;
+            width: 12rem;
+            transition-duration: .3s;
+            filter: grayscale(1);
+        }
+
+        &>a:hover{
+            filter: grayscale(0);
+        }
+    }
+}

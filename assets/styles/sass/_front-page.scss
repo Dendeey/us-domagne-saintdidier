@@ -1,0 +1,59 @@
+.slider__img__homepage{
+    filter: brightness(1);
+}
+
+.section__actualites{
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+}
+
+.section__prochains__matchs{
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+
+    .item__widget__scorenco__prochains__matchs{
+        border-radius: 5px;
+    }
+}
+
+.section__classement__resultats{
+    background-color: $grey;
+
+    .item__widget__scorenco__classement__resultats{
+        border-radius: 5px;
+    }
+}
+
+.section__img__nav{
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+
+    .item__widget__scorenco__classement__resultats{
+        border-radius: 5px;
+    }
+}
+
+.section__instagram{
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
+
+    .sbi_header_link{
+        font-family: $openSans;
+        font-size: 1rem;
+    }
+
+    .sbi_photo{
+        border-radius: 3px;
+    }
+
+    .sbi_load_btn{
+        font-family: $openSans;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+}

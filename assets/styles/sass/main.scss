@@ -1,0 +1,48 @@
+// Vars
+@import 'vars';
+
+//Content
+@import 'reset';
+@import 'header';
+@import 'front-page';
+@import 'partenaires';
+@import 'footer';
+
+// Comportement général
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $mainBlue;
+    }
+
+    body {
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 42;
+    }
+}
