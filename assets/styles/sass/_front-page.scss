@@ -1,17 +1,17 @@
 .slider__img__homepage{
-    filter: brightness(1);
+    filter: brightness(0.7);
 }
 
 .section__actualites{
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, .1);
-    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+    background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
 }
 
 .section__prochains__matchs{
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, .1);
-    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+    background-image: linear-gradient(to right, $mainYellow 100%, $mainBlue);
 
     .item__widget__scorenco__prochains__matchs{
         border-radius: 5px;
@@ -29,11 +29,17 @@
 .section__img__nav{
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, .1);
-    background-image: linear-gradient(to right, $mainBlue 65%, $mainYellow);
+    background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
 
     .item__widget__scorenco__classement__resultats{
         border-radius: 5px;
     }
+}
+
+.section__boutique{
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .1);
+    background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
 }
 
 .section__instagram{

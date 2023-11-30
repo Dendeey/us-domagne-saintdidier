@@ -4,12 +4,11 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
     <?php wp_head(); ?>
 </head>
 
 <body id="site__home" <?php body_class(); ?>>
-    <header id="site__header" class="site__header">
+    <header <?php if (is_front_page()) { ?> id="homepage__header" class="homepage__header" <?php } else { ?> id="page__header" class="page__header" <?php } ?>>
         <div class="header__menu__nav">
             <button id="menu__btn" class="header__side__menu__button">
                 <i class="fa-solid fa-bars-staggered fa-xl"></i>
@@ -32,9 +31,14 @@
         </div>
         <div id="burger__menu" class="site__header__burger">
             <div class="top__header__burger">
-                <div class="top__header__burger__icon">
-                    <i class="fa-solid fa-bars-staggered fa-xl"></i>
-                    <span>Menu</span>
+                <div id="top__header__burger__icon" class="top__header__burger__icon">
+                    <div>
+                        <i class="fa-solid fa-bars-staggered fa-xl"></i>
+                        <span>Menu</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-xmark fa-xl"></i>
+                    </div>
                 </div>
                 <nav class="top__header__burger__nav">
                     <ul>
@@ -47,10 +51,10 @@
                             </div>
                             <div id="content__dropdown__top" class="content__dropdown content__dropdown__hidden">
                                 <ul>
-                                    <li><a href="#">Histoire du club</a></li>
-                                    <li><a href="#">Bureau / Commissions</a></li>
-                                    <li><a href="#">Staff</a></li>
-                                    <li><a href="#">Infrastructures</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/histoire-du-club/">Histoire du club</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/bureau-commissions/">Bureau / Commissions</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/staff/">Staff</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/infrastructures/">Infrastructures</a></li>
                                 </ul>
                             </div>
 
@@ -64,17 +68,17 @@
                             </div>
                             <div id="content__dropdown__bottom" class="content__dropdown content__dropdown__hidden">
                                 <ul>
-                                    <li><a href="#">école de foot</a></li>
-                                    <li><a href="#">Pôle jeunes</a></li>
-                                    <li><a href="#">Pôle séniors</a></li>
-                                    <li><a href="#">Vétérans</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/ecole-de-foot/">école de foot</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/pole-jeunes/">Pôle jeunes</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/pole-seniors/">Pôle séniors</a></li>
+                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/veterans/">Vétérans</a></li>
                                 </ul>
                             </div>
 
                         </li>
-                        <li class="title__dropdown"><a href="#">Convocations</a></li>
-                        <li class="title__dropdown"><a href="#">Arbitrage</a></li>
-                        <li class="title__dropdown"><a href="#">Contact</a></li>
+                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/convocations/">Convocations</a></li>
+                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/arbitrage/">Arbitrage</a></li>
+                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/contact/">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -93,7 +97,6 @@
             </div>
         </div>
     </header>
-
     <div id="overlay"></div>
 
     <?php wp_body_open(); ?>

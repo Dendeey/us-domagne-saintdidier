@@ -58,7 +58,7 @@
                 font-family: $openSans;
                 color: white;
 
-                &>span{
+                &>span {
                     text-transform: uppercase;
                 }
             }
@@ -78,7 +78,7 @@
                     font-family: $openSans;
                     color: white;
 
-                    &>span{
+                    &>span {
                         text-transform: uppercase;
                     }
                 }
@@ -88,6 +88,12 @@
                 }
             }
         }
+    }
+
+    .footer__section__gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
     }
 
     .footer__menu {
@@ -113,30 +119,85 @@
     }
 }
 
-@media screen and (max-width : 991px) {
+@media screen and (min-width: 768px) and (max-width : 1023px) {
+    .site__footer {
+
+        .footer__nav {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            row-gap: 4rem;
+
+            .footer__nav__item {
+
+                .footer__nav__item__title {
+                    text-align: center;
+                }
+
+                &>h4 {
+                    text-align: center;
+                }
+
+                &>nav {
+
+                    &>a {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .footer__section__gallery {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width : 767px) {
 
     .site__footer {
 
         .footer__nav {
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            row-gap: 4rem;
+            column-gap: 1rem;
 
-            .footer__nav__item{
-                
-                .footer__nav__item__title{
+            .footer__nav__item {
+
+                .footer__nav__item__title {
                     text-align: center;
                 }
 
-                &>h4{
+                &>h4 {
                     text-align: center;
                 }
 
-                &>nav{
+                &>nav {
 
-                    &>a{
+                    &>a {
                         text-align: center;
                     }
+                }
+            }
+        }
+
+        .footer__section__gallery {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+
+            &>figure:nth-of-type(2) {
+                display: flex;
+                justify-content: center;
+
+                &>img {
+                    width: 80%;
                 }
             }
         }

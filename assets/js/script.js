@@ -2,14 +2,10 @@ window.addEventListener("DOMContentLoaded", function () {
     //Effet header au défilement
     function headerEffectOnScroll() {
         window.addEventListener('scroll', function () {
-            var header = document.getElementById('site__header');
+            var header = document.getElementById('homepage__header');
             var logo = document.getElementById('site__header__logo');
-            var instaIcon = document.getElementById('insta__icon');
-            var fbIcon = document.getElementById('fb__icon');
             header.classList.toggle('sticky', window.scrollY > 0);
             logo.classList.toggle('sticky__logo', window.scrollY > 0);
-            instaIcon.classList.toggle('sticky__social__media', window.scrollY > 0);
-            fbIcon.classList.toggle('sticky__social__media', window.scrollY > 0);
         });
     }
     headerEffectOnScroll();
@@ -19,6 +15,7 @@ window.addEventListener("DOMContentLoaded", function () {
         var menuBtn = document.getElementById('menu__btn');
         var burgerMenu = document.getElementById('burger__menu');
         var overlay = document.getElementById('overlay');
+        var burgerMenuBtn = document.getElementById('top__header__burger__icon');
 
         menuBtn.addEventListener('click', function () {
             burgerMenu.classList.toggle('open');
@@ -31,8 +28,9 @@ window.addEventListener("DOMContentLoaded", function () {
         document.addEventListener('click', function (event) {
             var clickInMenuBtn = menuBtn.contains(event.target);
             var clickInBurgerMenu = burgerMenu.contains(event.target);
-            //Si le clique n'est ni dans le bouton ou dans le menu
-            if (!clickInMenuBtn && !clickInBurgerMenu) {
+            var clickInBurgerMenuBtn = burgerMenuBtn.contains(event.target);
+            //Si le clique est dans sur le bouton "Burger Menu" ou n'est ni dans le bouton du menu et dans le menu
+            if (clickInBurgerMenuBtn || !clickInMenuBtn && !clickInBurgerMenu) {
                 burgerMenu.classList.remove('open');
                 overlay.style.display = 'none';
             }

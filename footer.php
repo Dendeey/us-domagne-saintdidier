@@ -33,6 +33,17 @@
                 </nav>
             </div>
         </div>
+        <div class="footer__section__gallery">
+            <figure>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/echarpe_usd.png" alt="Echarpe usd">
+            </figure>
+            <figure>
+                <img class="footer__section__img__item" src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan_usd_yellowborder.png" alt="Slogan usd">
+            </figure>
+            <figure>
+                <img class="footer__section__img__item" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_district.png" alt="Logo district">
+            </figure>
+        </div>
         <?php wp_nav_menu(array(
             'theme_location' => 'footer',
             'container' => 'ul', // afin d'éviter d'avoir une div autour 

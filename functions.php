@@ -6,6 +6,9 @@ add_theme_support('post-thumbnails');
 // Ajouter automatiquement le titre du site dans l'en-tête du site
 add_theme_support('title-tag');
 
+// Supprimer les styles css des galeries d'images de WordPress
+add_filter( 'use_default_gallery_style', '__return_false' );
+
 // Déclarer les scripts et styles avec un Hook
 function usdomagne_register_assets() {
     
@@ -43,3 +46,155 @@ register_sidebar( array(
 	'id' => 'blog-sidebar',
 	'name' => 'Blog',
 ) );
+
+// Récupérer les données des champs ACF
+function getClubPageData(){
+    $data = [];
+    $data['club'] = [];
+    $data['club']['image'] = get_field('image');
+    $data['club']['titre'] = get_field('titre_principal', false, false);
+    $data['club']['navigation'] = get_field('menu_de_navigation', false, false);
+    $data['club']['image1'] = get_field('image_1');
+    $data['club']['image2'] = get_field('image_2');
+    $data['club']['contenu-principal'] = get_field('contenu_principal');
+    $data['club']['contenu-secondaire'] = get_field('contenu_secondaire');
+    $data['club']['contenu-embarque'] = get_field('contenu_embarque');
+
+    return $data;
+}
+
+function getGarTeamsPageData(){
+    $dataGar = [];
+
+    $dataGar['gar'] = [];
+
+    $dataGar['gar']['gar1'] = get_field('gar_1');
+    $dataGar['gar']['gar2'] = get_field('gar_2');
+    $dataGar['gar']['gar3'] = get_field('gar_3');
+    $dataGar['gar']['gar4'] = get_field('gar_4');
+    $dataGar['gar']['gar5'] = get_field('gar_5');
+    $dataGar['gar']['gar6'] = get_field('gar_6');
+    $dataGar['gar']['gar7'] = get_field('gar_7');
+    $dataGar['gar']['gar8'] = get_field('gar_8');
+
+    return $dataGar;
+}
+
+function getDefTeamsPageData(){
+    $dataDef = [];
+
+    $dataDef['def'] = [];
+
+    $dataDef['def']['def1'] = get_field('def_1');
+    $dataDef['def']['def2'] = get_field('def_2');
+    $dataDef['def']['def3'] = get_field('def_3');
+    $dataDef['def']['def4'] = get_field('def_4');
+    $dataDef['def']['def5'] = get_field('def_5');
+    $dataDef['def']['def6'] = get_field('def_6');
+    $dataDef['def']['def7'] = get_field('def_7');
+    $dataDef['def']['def8'] = get_field('def_8');
+    $dataDef['def']['def9'] = get_field('def_9');
+    $dataDef['def']['def10'] = get_field('def_10');
+    $dataDef['def']['def11'] = get_field('def_11');
+    $dataDef['def']['def12'] = get_field('def_12');
+    $dataDef['def']['def13'] = get_field('def_13');
+    $dataDef['def']['def14'] = get_field('def_14');
+    $dataDef['def']['def15'] = get_field('def_15');
+    $dataDef['def']['def16'] = get_field('def_16');
+    $dataDef['def']['def17'] = get_field('def_17');
+    $dataDef['def']['def18'] = get_field('def_18');
+    $dataDef['def']['def19'] = get_field('def_19');
+    $dataDef['def']['def20'] = get_field('def_20');
+
+    return $dataDef;
+}
+
+function getMilTeamsPageData(){
+    $dataMil = [];
+
+    $dataMil['mil'] = [];
+
+    $dataMil['mil']['mil1'] = get_field('mil_1');
+    $dataMil['mil']['mil2'] = get_field('mil_2');
+    $dataMil['mil']['mil3'] = get_field('mil_3');
+    $dataMil['mil']['mil4'] = get_field('mil_4');
+    $dataMil['mil']['mil5'] = get_field('mil_5');
+    $dataMil['mil']['mil6'] = get_field('mil_6');
+    $dataMil['mil']['mil7'] = get_field('mil_7');
+    $dataMil['mil']['mil8'] = get_field('mil_8');
+    $dataMil['mil']['mil9'] = get_field('mil_9');
+    $dataMil['mil']['mil10'] = get_field('mil_10');
+    $dataMil['mil']['mil11'] = get_field('mil_11');
+    $dataMil['mil']['mil12'] = get_field('mil_12');
+    $dataMil['mil']['mil13'] = get_field('mil_13');
+    $dataMil['mil']['mil14'] = get_field('mil_14');
+    $dataMil['mil']['mil15'] = get_field('mil_15');
+    $dataMil['mil']['mil16'] = get_field('mil_16');
+    $dataMil['mil']['mil17'] = get_field('mil_17');
+    $dataMil['mil']['mil18'] = get_field('mil_18');
+    $dataMil['mil']['mil19'] = get_field('mil_19');
+    $dataMil['mil']['mil20'] = get_field('mil_20');
+
+    return $dataMil;
+}
+
+function getAttTeamsPageData(){
+    $dataAtt = [];
+
+    $dataAtt['att'] = [];
+
+    $dataAtt['att']['att1'] = get_field('att_1');
+    $dataAtt['att']['att2'] = get_field('att_2');
+    $dataAtt['att']['att3'] = get_field('att_3');
+    $dataAtt['att']['att4'] = get_field('att_4');
+    $dataAtt['att']['att5'] = get_field('att_5');
+    $dataAtt['att']['att6'] = get_field('att_6');
+    $dataAtt['att']['att7'] = get_field('att_7');
+    $dataAtt['att']['att8'] = get_field('att_8');
+    $dataAtt['att']['att9'] = get_field('att_9');
+    $dataAtt['att']['att10'] = get_field('att_10');
+    $dataAtt['att']['att11'] = get_field('att_11');
+    $dataAtt['att']['att12'] = get_field('att_12');
+    $dataAtt['att']['att13'] = get_field('att_13');
+    $dataAtt['att']['att14'] = get_field('att_14');
+    $dataAtt['att']['att15'] = get_field('att_15');
+    $dataAtt['att']['att16'] = get_field('att_16');
+    $dataAtt['att']['att17'] = get_field('att_17');
+    $dataAtt['att']['att18'] = get_field('att_18');
+    $dataAtt['att']['att19'] = get_field('att_19');
+    $dataAtt['att']['att20'] = get_field('att_20');
+
+    return $dataAtt;
+}
+
+function getStaffTeamsPageData(){
+    $dataStaff = [];
+
+    $dataStaff['staff'] = [];
+
+    $dataStaff['staff']['staff1'] = get_field('staff_1');
+    $dataStaff['staff']['staff2'] = get_field('staff_2');
+    $dataStaff['staff']['staff3'] = get_field('staff_3');
+    $dataStaff['staff']['staff4'] = get_field('staff_4');
+    $dataStaff['staff']['staff5'] = get_field('staff_5');
+    $dataStaff['staff']['staff6'] = get_field('staff_6');
+    $dataStaff['staff']['staff7'] = get_field('staff_7');
+    $dataStaff['staff']['staff8'] = get_field('staff_8');
+
+    return $dataStaff;
+}
+
+function getScorencoWidgetsTeamPage(){
+    $dataWidgets = [];
+
+    $dataWidgets['widget'] = [];
+
+    $dataWidgets['widget']['widget1'] = get_field('classement_teams_page');
+    $dataWidgets['widget']['widget2'] = get_field('calendrier_resultats_teams_page');
+
+    return $dataWidgets;
+}
+
+
+
+
