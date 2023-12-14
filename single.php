@@ -14,7 +14,7 @@
                   <span><i class="fa-solid fa-minus"></i></span>
                 </li>
                 <li>
-                  <a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/blog/">Actualités</a>
+                  <a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/actualites/">Actualités</a>
                 </li>
                 <li>
                   <span><i class="fa-solid fa-minus"></i></span>
@@ -29,6 +29,10 @@
             <p class="post__meta">Publié le <?php the_time(get_option('date_format')); ?></p>
           </div>
         </div>
+        <?php
+        $dataPost = getSinglePostData();
+        // var_dump($dataPost);
+        ?>
         <article class="post__single">
           <div class="post__single__img">
             <figure>
@@ -36,7 +40,37 @@
             </figure>
           </div>
           <div class="post__single__content">
-            <?php the_content(); ?>
+            <?php if ($dataPost['post']['content']) { ?>
+              <section class="post__single__main__content">
+                <?php echo $dataPost['post']['content']; ?>
+              </section>
+            <?php } ?>
+            <section class="post__single__gallery">
+              <?php
+              $countPostData = count($dataPost['post']);
+              // var_dump($countPostData);
+              for ($i = 1; $i < $countPostData; $i++) {
+
+                $keyPost = 'image' . $i;
+                if (isset($dataPost['post'][$keyPost])) {
+                  $postData = $dataPost['post'][$keyPost];
+                  // var_dump($postData);
+                }
+                if ($postData) {
+              ?>
+                  <figure>
+                    <img src="<?php echo $postData['url'] ?>" alt="<?php echo $postData['title'] ?>">
+                  </figure>
+                <?php } ?>
+              <?php } ?>
+            </section>
+            <?php if($dataPost['post']['affiche']){ ?>
+            <section class="post__single__poster">
+              <figure>
+                <img src="<?php echo $dataPost['post']['affiche']['url'] ?>" alt="<?php echo $dataPost['post']['affiche']['title'] ?>">
+              </figure>
+            </section>
+            <?php } ?>
           </div>
         </article>
     <?php endwhile;

@@ -4,7 +4,11 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta content="<?php echo get_bloginfo('name'); ?>" name="title">
+    <meta content="<?php echo get_bloginfo('description'); ?>" name="description">
+    <meta name="keywords" content="classement, équipe, sport, site officiel, dirigeant de club, joueur, terrain, entraîneur, calendrier, résultat, championnat, coupe, score, entraînement, supporter, US Domagné Saint-Didier">
     <?php wp_head(); ?>
+    <title><?php echo get_bloginfo('name'); ?></title>
 </head>
 
 <body id="site__home" <?php body_class(); ?>>
@@ -50,14 +54,12 @@
                                 </div>
                             </div>
                             <div id="content__dropdown__top" class="content__dropdown content__dropdown__hidden">
-                                <ul>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/histoire-du-club/">Histoire du club</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/bureau-commissions/">Bureau / Commissions</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/staff/">Staff</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/infrastructures/">Infrastructures</a></li>
-                                </ul>
+                                <?php wp_nav_menu(array(
+                                    'theme_location' => 'burger-club_dropdown',
+                                    'container' => 'ul', // afin d'éviter d'avoir une div autour 
+                                    'menu_class' => 'burger__club', // ma classe personnalisée  
+                                )); ?>
                             </div>
-
                         </li>
                         <li>
                             <div id="title__arrow__bottom" class="title__dropdown__arrow">
@@ -67,18 +69,19 @@
                                 </div>
                             </div>
                             <div id="content__dropdown__bottom" class="content__dropdown content__dropdown__hidden">
-                                <ul>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/ecole-de-foot/">école de foot</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/pole-jeunes/">Pôle jeunes</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/pole-seniors/">Pôle séniors</a></li>
-                                    <li><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/veterans/">Vétérans</a></li>
-                                </ul>
+                                <?php wp_nav_menu(array(
+                                    'theme_location' => 'burger-equipes_dropdown',
+                                    'container' => 'ul', // afin d'éviter d'avoir une div autour 
+                                    'menu_class' => 'burger__equipes', // ma classe personnalisée  
+                                )); ?>
                             </div>
 
                         </li>
-                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/convocations/">Convocations</a></li>
-                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/arbitrage/">Arbitrage</a></li>
-                        <li class="title__dropdown"><a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/contact/">Contact</a></li>
+                        <?php wp_nav_menu(array(
+                            'theme_location' => 'burger-menu',
+                            'container' => false, // afin d'éviter d'avoir une div autour 
+                            'menu_class' => 'burger__menu', // ma classe personnalisée  
+                        )); ?>
                     </ul>
                 </nav>
             </div>

@@ -32,25 +32,29 @@ get_header();
   ?>
 
   <section class="teams__navigation">
-    <a href="#classement-teams">Classement</a>
-    <a href="#calendrier__calendrier-teams">Calendrier<span>/</span>Résultats</a>
-  </section>
 
-  <section class="teams__gallery__navigation">
-    <ul>
-      <li><a href="#gardiens">Gardiens</a></li>
-      <li><a href="#defenseurs">Défenseurs</a></li>
-      <li><a href="#milieux">Milieux</a></li>
-      <li><a href="#attaquants">Attaquants</a></li>
-      <li><a href="#staff">Staff</a></li>
-    </ul>
+    <section class="teams__classement-calendrier__navigation">
+      <button id="classement__teams__anchor">Classement</button>
+      <button id="calendrier-resultats__teams__anchor">Calendrier<span>/</span>Résultats</button>
+    </section>
+
+    <section class="teams__gallery__navigation">
+      <ul>
+        <li><button id="gardiens">Gardiens</button></li>
+        <li><button id="defenseurs">Défenseurs</button></li>
+        <li><button id="milieux">Milieux</button></li>
+        <li><button id="attaquants">Attaquants</button></li>
+        <li><button id="staff">Staff</button></li>
+      </ul>
+    </section>
+    
   </section>
 
   <div class="container__behavior">
 
-    <section class="teams__gallery">
+    <section id="gardiens__target" class="teams__gallery">
 
-      <section id="gardiens" class="teams__gallery__header">
+      <section class="teams__gallery__header">
         <h2>Gardiens</h2>
       </section>
 
@@ -77,7 +81,7 @@ get_header();
       <span class="style__border__bottom"></span>
     </section>
 
-    <section id="defenseurs" class="teams__gallery">
+    <section id="defenseurs__target" class="teams__gallery">
 
       <section class="teams__gallery__header">
         <h2>Défenseurs</h2>
@@ -105,7 +109,7 @@ get_header();
       <span class="style__border__bottom"></span>
     </section>
 
-    <section id="milieux" class="teams__gallery">
+    <section id="milieux__target" class="teams__gallery">
 
       <section class="teams__gallery__header">
         <h2>Milieux</h2>
@@ -134,7 +138,7 @@ get_header();
       <span class="style__border__bottom"></span>
     </section>
 
-    <section id="attaquants" class="teams__gallery">
+    <section id="attaquants__target" class="teams__gallery">
 
       <section class="teams__gallery__header">
         <h2>Attaquants</h2>
@@ -163,7 +167,7 @@ get_header();
       <span class="style__border__bottom"></span>
     </section>
 
-    <section id="staff" class="teams__gallery">
+    <section id="staff__target" class="teams__gallery">
 
       <section class="teams__gallery__header">
         <h2>Staff</h2>
@@ -188,12 +192,12 @@ get_header();
           <?php } ?>
         <?php } ?>
       </section>
-      
+
     </section>
 
     <section class="teams__widgets">
       <?php if ($dataWidgets['widget']['widget1']) { ?>
-        <section id="classement-teams">
+        <section id="classement__teams">
           <h3>Classement</h3>
           <span class="style__border__bottom"></span>
           <?php echo $dataWidgets['widget']['widget1']; ?>
@@ -201,7 +205,7 @@ get_header();
       <?php } ?>
 
       <?php if ($dataWidgets['widget']['widget2']) { ?>
-        <section id="calendrier__calendrier-teams">
+        <section id="calendrier-resultats__teams">
           <h3>Calendrier<span>/</span>Résultats</h3>
           <span class="style__border__bottom"></span>
           <?php echo $dataWidgets['widget']['widget2']; ?>

@@ -11,12 +11,13 @@
 @import '404';
 @import 'template-default';
 @import 'template-teams';
+@import 'template-default-bis';
 
 // Comportement général
 
 html {
     font-size: 14px;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     overflow-x: hidden;
 
     /* width */
@@ -37,6 +38,7 @@ html {
     body {
         min-height: 100vh;
         width: 100vw;
+        line-height: 1.5;
     }
 
     #overlay {
@@ -69,7 +71,7 @@ html {
     .style__border__bottom {
         display: inline-block;
         width: 100%;
-        height: 0.25rem;
+        height: 4px;
         background-image: linear-gradient(to right, $mainYellow 50%, $mainBlue 50%);
     }
 

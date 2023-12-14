@@ -27,7 +27,7 @@ get_header();
           </div>
         <?php } ?>
         <?php if ($data['club']['image1'] && $data['club']['image2']) { ?>
-          <div class="right__section__gallery">
+          <div class="right__section__referees">
             <figure>
               <img src="<?php echo $data['club']['image1']['url'] ?>" alt="<?php echo $data['club']['image1']['title'] ?>">
             </figure>
@@ -39,6 +39,13 @@ get_header();
         <?php if ($data['club']['contenu-principal']) { ?>
           <div class="right__section__main__content">
             <?php echo $data['club']['contenu-principal'] ?>
+          </div>
+        <?php } ?>
+        <?php if ($data['club']['carrousel']) { ?>
+          <div class="right__section__gallery">
+            <section class="right__section__gallery__content">
+              <?php echo $data['club']['carrousel'] ?>
+            </section>
           </div>
         <?php } ?>
         <?php if ($data['club']['contenu-secondaire']) { ?>

@@ -251,7 +251,6 @@ table {
 .site__header__burger .top__header__burger {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
 }
 .site__header__burger .top__header__burger .top__header__burger__icon {
   display: flex;
@@ -340,11 +339,11 @@ table {
   opacity: 0;
   height: 0;
 }
-.site__header__burger .top__header__burger .top__header__burger__nav > ul .title__dropdown {
+.site__header__burger .top__header__burger .top__header__burger__nav > ul .burger__menu > li {
   width: 100%;
   height: 4rem;
 }
-.site__header__burger .top__header__burger .top__header__burger__nav > ul .title__dropdown > a {
+.site__header__burger .top__header__burger .top__header__burger__nav > ul .burger__menu > li > a {
   display: flex;
   align-items: center;
   height: 100%;
@@ -353,7 +352,7 @@ table {
   font-family: "Open Sans", sans-serif;
   color: white;
 }
-.site__header__burger .top__header__burger .top__header__burger__nav > ul .title__dropdown:hover {
+.site__header__burger .top__header__burger .top__header__burger__nav > ul .burger__menu > li:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .site__header__burger .bottom__header__burger {
@@ -439,6 +438,7 @@ table {
 }
 .header__all__pages__nav > ul > li .nav__item__bold {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .header__all__pages__title {
@@ -494,6 +494,9 @@ table {
   }
   .site__header__burger.open {
     transform: translateX(0);
+  }
+  .header__all__pages__nav {
+    display: none;
   }
 }
 .slider__img__homepage {
@@ -942,10 +945,17 @@ table {
   position: relative;
   width: 100%;
 }
+.actualites__content .actualites__content__container .post__link .post > figure {
+  overflow: hidden;
+}
 .actualites__content .actualites__content__container .post__link .post > figure > img {
   width: 100%;
   height: 250px;
   object-fit: cover;
+  transition: transform 0.5s;
+}
+.actualites__content .actualites__content__container .post__link .post > figure > img:hover {
+  transform: scale(1.05);
 }
 .actualites__content .actualites__content__container .post__link .post > div {
   font-family: "Open Sans", sans-serif;
@@ -1065,7 +1075,6 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
   padding-bottom: 4rem;
 }
 .post__single .post__single__img {
@@ -1077,49 +1086,75 @@ table {
   object-fit: cover;
 }
 .post__single .post__single__content {
-  width: 100%;
+  max-width: 50rem;
   overflow: hidden;
   font-family: "Open Sans", sans-serif;
 }
-.post__single .post__single__content > h1 {
+.post__single .post__single__content .post__single__main__content > h1 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
-.post__single .post__single__content > h2 {
+.post__single .post__single__content .post__single__main__content > h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
-.post__single .post__single__content > h3 {
+.post__single .post__single__content .post__single__main__content > h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
 }
-.post__single .post__single__content > p {
+.post__single .post__single__content .post__single__main__content > p {
+  color: #595959;
   text-align: justify;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.15rem;
   line-height: normal;
 }
-.post__single .post__single__content > p > a {
+.post__single .post__single__content .post__single__main__content > p > a {
   text-decoration: none;
   color: #034076;
 }
-.post__single .post__single__content > p > a:hover {
+.post__single .post__single__content .post__single__main__content > p > a:hover {
   text-decoration: underline;
 }
-.post__single .post__single__content > ul {
+.post__single .post__single__content .post__single__main__content > p > img {
+  margin: 1rem auto;
+}
+.post__single .post__single__content .post__single__main__content > ul {
   padding-left: 2rem;
   margin-bottom: 1rem;
 }
-.post__single .post__single__content > ul > li {
+.post__single .post__single__content .post__single__main__content > ul > li {
   font-size: 1.15rem;
   line-height: normal;
+}
+.post__single .post__single__content .post__single__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.post__single .post__single__content .post__single__gallery > figure > img {
+  width: 100%;
+  height: auto;
+}
+.post__single .post__single__content .post__single__poster {
+  display: flex;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+.post__single .post__single__content .post__single__poster > figure > img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1136,8 +1171,17 @@ table {
     grid-template-columns: 1fr;
     row-gap: 3rem;
   }
+  .post__single__header__content .post__single__header__fixed > h1 {
+    font-size: 2rem;
+  }
   .post__single__header__content .post__single__header__fixed > ul {
     gap: 2rem;
+  }
+  .post__single .post__single__content {
+    max-width: 100%;
+  }
+  .post__single .post__single__gallery {
+    grid-template-columns: 1fr;
   }
 }
 .section__error__content {
@@ -1193,6 +1237,7 @@ table {
   display: flex;
   flex-direction: column;
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
 }
 .right__section__content .right__section__container {
   padding: 3.5rem;
@@ -1234,13 +1279,13 @@ table {
   background-position: left;
   color: #FDCD11;
 }
-.right__section__content .right__section__container .right__section__gallery {
+.right__section__content .right__section__container .right__section__referees {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
-.right__section__content .right__section__container .right__section__gallery > figure > img {
+.right__section__content .right__section__container .right__section__referees > figure > img {
   width: 100%;
   height: auto;
 }
@@ -1252,23 +1297,46 @@ table {
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
+  text-transform: uppercase;
 }
 .right__section__content .right__section__container .right__section__main__content > h2 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: max-content;
+}
+.right__section__content .right__section__container .right__section__main__content > h2::after {
+  content: "";
+  width: 75%;
+  height: 4px;
+  background-image: linear-gradient(to right, #FDCD11 50%, #034076 50%);
 }
 .right__section__content .right__section__container .right__section__main__content > h3 {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   margin-top: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: max-content;
+}
+.right__section__content .right__section__container .right__section__main__content > h3::after {
+  content: "";
+  width: 75%;
+  height: 4px;
+  background-image: linear-gradient(to right, #FDCD11 50%, #034076 50%);
 }
 .right__section__content .right__section__container .right__section__main__content > p {
   margin-bottom: 1rem;
+  color: #595959;
   font-size: 1.15rem;
-  line-height: normal;
   text-align: justify;
   display: grid;
 }
@@ -1279,17 +1347,69 @@ table {
 .right__section__content .right__section__container .right__section__main__content > ul {
   padding-left: 2rem;
   margin-bottom: 1rem;
+  color: #595959;
 }
 .right__section__content .right__section__container .right__section__main__content > ul > li {
   font-size: 1.15rem;
-  line-height: normal;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 {
+  font-size: 1.15rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50rem;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p > label {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 700;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p > label > span {
+  width: 100%;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p > label > span > input {
+  width: 100%;
+  height: 2rem;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p > label > span > textarea {
+  width: 100%;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p .wpcf7-submit {
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #034076;
+  color: #034076;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 1rem;
+  background: linear-gradient(to left, #fff 50%, #034076 50%) right;
+  background-size: 200%;
+  transition: 0.3s ease-out;
+}
+.right__section__content .right__section__container .right__section__main__content #wpcf7-f1180-o1 > form > p .wpcf7-submit:hover {
+  background-position: left;
+  color: #FDCD11;
+}
+.right__section__content .right__section__container .right__section__gallery .right__section__gallery__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+  align-items: center;
 }
 .right__section__content .right__section__container .right__section__second__content {
   margin-bottom: 2.5rem;
 }
 .right__section__content .right__section__container .right__section__second__content > p {
   font-size: 1.15rem;
-  line-height: normal;
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -1311,65 +1431,101 @@ table {
   .right__section__content .right__section__container {
     padding: 1rem;
   }
+  .right__section__content .right__section__container .right__section__referees {
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .right__section__content .right__section__container .right__section__gallery .right__section__gallery__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .teams__navigation {
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 63px;
+  z-index: 1;
+  overflow: hidden;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #FDCD11 100%, #034076);
+  padding-top: 1rem;
+}
+.teams__navigation .teams__classement-calendrier__navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   font-family: "Open Sans", sans-serif;
-  padding-left: 20vw;
-  padding-right: 20vw;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
-.teams__navigation > a {
-  flex: auto;
-  width: 15rem;
+.teams__navigation .teams__classement-calendrier__navigation > button {
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 3rem;
   text-decoration: none;
   text-align: center;
   border: 2px solid #034076;
   color: #034076;
   font-weight: 700;
   font-size: 1.15rem;
-  padding: 1rem;
+  font-family: "Open Sans", sans-serif;
   background: linear-gradient(to left, #fff 50%, #034076 50%) right;
   background-size: 200%;
   transition: 0.3s ease-out;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
 }
-.teams__navigation > a > span {
+.teams__navigation .teams__classement-calendrier__navigation > button > span {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.teams__navigation > a:hover {
+.teams__navigation .teams__classement-calendrier__navigation > button:hover {
   background-position: left;
   color: #FDCD11;
 }
-
-.teams__gallery__navigation {
+.teams__navigation .teams__gallery__navigation {
   font-family: "Open Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #034076 100%, #FDCD11);
+  padding: 1rem;
 }
-.teams__gallery__navigation > ul {
+.teams__navigation .teams__gallery__navigation > ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.teams__gallery__navigation > ul > li > a {
+.teams__navigation .teams__gallery__navigation > ul > li > button {
+  font-family: "Open Sans", sans-serif;
+  width: 10rem;
   text-decoration: none;
-  border-radius: 15px;
-  background-color: #034076;
-  color: #FDCD11;
+  border: none;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, #034076 100%, #FDCD11);
+  color: white;
   font-size: 1.15rem;
   font-weight: 700;
-  padding: 5px 10px 5px 10px;
-}
-.teams__gallery__navigation > ul > li > a:hover {
+  text-transform: uppercase;
+  cursor: pointer;
   opacity: 0.5;
+}
+.teams__navigation .teams__gallery__navigation > ul > li > button:hover {
+  opacity: 1;
+  transition: 0.1s ease-out;
+}
+.teams__navigation .teams__gallery__navigation::-webkit-scrollbar:horizontal {
+  display: none;
 }
 
 .teams__gallery {
@@ -1377,7 +1533,7 @@ table {
   flex-direction: column;
   gap: 6rem;
   font-family: "Open Sans", sans-serif;
-  margin-top: 6rem;
+  padding-top: 6rem;
 }
 .teams__gallery .teams__gallery__header {
   display: flex;
@@ -1399,6 +1555,14 @@ table {
 .teams__gallery .teams__gallery__content > figure {
   overflow: hidden;
 }
+.teams__gallery .teams__gallery__content > figure > picture > img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.teams__gallery .teams__gallery__content > figure > picture > img:hover {
+  transform: scale(1.5) translateX(10%);
+}
 .teams__gallery .teams__gallery__content > figure > img {
   width: 100%;
   height: auto;
@@ -1419,14 +1583,15 @@ table {
   font-family: "Open Sans", sans-serif;
 }
 .teams__widgets > section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 6rem 0 0 0;
 }
 .teams__widgets > section > h3 {
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -3px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .teams__widgets > section > h3 > span {
   padding-left: 0.5rem;
@@ -1446,6 +1611,21 @@ table {
   }
 }
 @media screen and (max-width: 767px) {
+  .teams__navigation .teams__classement-calendrier__navigation {
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  .teams__navigation .teams__classement-calendrier__navigation > button {
+    height: 4rem;
+  }
+  .teams__navigation .teams__gallery__navigation {
+    justify-content: start;
+  }
+  .teams__navigation .teams__gallery__navigation > ul {
+    gap: 1rem;
+  }
   .teams__gallery .teams__gallery__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1456,9 +1636,206 @@ table {
     height: auto;
   }
 }
+.header__template__bis {
+  display: grid;
+}
+.header__template__bis .header__bis__main__image {
+  width: 100vw;
+}
+.header__template__bis .header__bis__main__image > figure > img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  filter: brightness(0.7);
+}
+.header__template__bis .header__template__bis__container {
+  position: absolute;
+  z-index: 33;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50vw;
+  justify-self: center;
+  align-self: center;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul > li {
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul > li > a {
+  color: white;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.4;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul > li > a:hover {
+  opacity: 1;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul > li .fa-minus {
+  opacity: 0.4;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__nav > ul > li .nav__item__bold {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__title > h1 {
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.header__template__bis .header__template__bis__container .header__template__bis__title > span {
+  width: 50%;
+}
+
+.template__bis__first__gallery {
+  margin-top: 4rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.template__bis__first__gallery > h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.template__bis__first__gallery > h2 .style__border__bottom {
+  width: 50%;
+}
+.template__bis__first__gallery > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+
+.template__bis__second__gallery {
+  margin-top: 8rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.template__bis__second__gallery > h3 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.template__bis__second__gallery > h3 .style__border__bottom {
+  width: 50%;
+}
+.template__bis__second__gallery > section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.template__bis__common__content {
+  margin: 4rem 0 8rem 0;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.template__bis__common__content .template__bis__common__content__item {
+  max-width: 50rem;
+}
+.template__bis__common__content .template__bis__common__content__item > h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+.template__bis__common__content .template__bis__common__content__item > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: max-content;
+}
+.template__bis__common__content .template__bis__common__content__item > h2::after {
+  content: "";
+  width: 75%;
+  height: 4px;
+  background-image: linear-gradient(to right, #FDCD11 50%, #034076 50%);
+}
+.template__bis__common__content .template__bis__common__content__item > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: max-content;
+}
+.template__bis__common__content .template__bis__common__content__item > h3::after {
+  content: "";
+  width: 75%;
+  height: 4px;
+  background-image: linear-gradient(to right, #FDCD11 50%, #034076 50%);
+}
+.template__bis__common__content .template__bis__common__content__item > p {
+  margin-bottom: 1rem;
+  color: #595959;
+  font-size: 1.15rem;
+  text-align: justify;
+  display: grid;
+}
+.template__bis__common__content .template__bis__common__content__item > p > img {
+  justify-self: center;
+  margin-top: 1rem;
+}
+.template__bis__common__content .template__bis__common__content__item > ul {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: #595959;
+}
+.template__bis__common__content .template__bis__common__content__item > ul > li {
+  font-size: 1.15rem;
+}
+
 html {
   font-size: 14px;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   overflow-x: hidden;
   /* width */
   /* Track */
@@ -1476,6 +1853,7 @@ html ::-webkit-scrollbar-thumb {
 html body {
   min-height: 100vh;
   width: 100vw;
+  line-height: 1.5;
 }
 html #overlay {
   display: none;
@@ -1503,7 +1881,7 @@ html .template-default__container__behavior {
 html .style__border__bottom {
   display: inline-block;
   width: 100%;
-  height: 0.25rem;
+  height: 4px;
   background-image: linear-gradient(to right, #FDCD11 50%, #034076 50%);
 }
 @media screen and (max-width: 767px) {

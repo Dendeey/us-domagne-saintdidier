@@ -8,7 +8,7 @@ if (is_category()) {
 } elseif (is_search()) {
 	$title = "Vous avez recherché : " . get_search_query();
 } else {
-	$title = 'Le Blog';
+	$title = 'Actualités';
 }
 ?>
 

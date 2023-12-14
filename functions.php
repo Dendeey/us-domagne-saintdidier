@@ -37,7 +37,9 @@ add_action( 'wp_enqueue_scripts', 'usdomagne_register_assets' );
 // Déclarer 3 emplacements de menu
 register_nav_menus( array(
 	'main' => 'Menu Principal',
-    'burgerMenu' => 'Menu burger',
+    'burger-club_dropdown' => 'Menu Club deroulant ',
+    'burger-equipes_dropdown' => 'Menu Equipes deroulant',
+    'burger-menu' => 'Menu Burger',
 	'footer' => 'Bas de page',
 ) );
 
@@ -57,6 +59,7 @@ function getClubPageData(){
     $data['club']['image1'] = get_field('image_1');
     $data['club']['image2'] = get_field('image_2');
     $data['club']['contenu-principal'] = get_field('contenu_principal');
+    $data['club']['carrousel'] = get_field('carrousel_images',false,false);
     $data['club']['contenu-secondaire'] = get_field('contenu_secondaire');
     $data['club']['contenu-embarque'] = get_field('contenu_embarque');
 
@@ -193,6 +196,37 @@ function getScorencoWidgetsTeamPage(){
     $dataWidgets['widget']['widget2'] = get_field('calendrier_resultats_teams_page');
 
     return $dataWidgets;
+}
+
+function getSinglePostData(){
+    $dataPost = [];
+
+    $dataPost['post'] = [];
+
+    $dataPost['post']['content'] = get_field('contenu_texte_image');
+    $dataPost['post']['image1'] = get_field('actualite_image_1');
+    $dataPost['post']['image2'] = get_field('actualite_image_2');
+    $dataPost['post']['image3'] = get_field('actualite_image_3');
+    $dataPost['post']['image4'] = get_field('actualite_image_4');
+    $dataPost['post']['image5'] = get_field('actualite_image_5');
+    $dataPost['post']['affiche'] = get_field('affiche_image');
+
+    return $dataPost;
+}
+
+function getTemplateDefaultBisData(){
+    $dataBis = [];
+
+    $dataBis['bis'] = [];
+
+    $dataBis['bis']['mainPicture'] = get_field('image_illustration_page');
+    $dataBis['bis']['title1'] = get_field('titre_1');
+    $dataBis['bis']['gallery1'] = get_field('galerie_1',false,false);
+    $dataBis['bis']['title2'] = get_field('titre_2');
+    $dataBis['bis']['gallery2'] = get_field('galerie_2',false,false);
+    $dataBis['bis']['commonContent'] = get_field('contenu_general');
+
+    return $dataBis;
 }
 
 
