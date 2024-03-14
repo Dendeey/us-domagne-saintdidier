@@ -31,7 +31,7 @@
         </div>
         <?php
         $dataPost = getSinglePostData();
-        // var_dump($dataPost);
+      
         ?>
         <article class="post__single">
           <div class="post__single__img">
@@ -48,13 +48,13 @@
             <section class="post__single__gallery">
               <?php
               $countPostData = count($dataPost['post']);
-              // var_dump($countPostData);
+              
               for ($i = 1; $i < $countPostData; $i++) {
 
                 $keyPost = 'image' . $i;
                 if (isset($dataPost['post'][$keyPost])) {
                   $postData = $dataPost['post'][$keyPost];
-                  // var_dump($postData);
+                  
                 }
                 if ($postData) {
               ?>
@@ -64,18 +64,19 @@
                 <?php } ?>
               <?php } ?>
             </section>
-            <?php if($dataPost['post']['affiche']){ ?>
-            <section class="post__single__poster">
-              <figure>
-                <img src="<?php echo $dataPost['post']['affiche']['url'] ?>" alt="<?php echo $dataPost['post']['affiche']['title'] ?>">
-              </figure>
-            </section>
+            <?php if ($dataPost['post']['affiche']) { ?>
+              <section class="post__single__poster">
+                <figure>
+                  <img src="<?php echo $dataPost['post']['affiche']['url'] ?>" alt="<?php echo $dataPost['post']['affiche']['title'] ?>">
+                </figure>
+              </section>
             <?php } ?>
           </div>
         </article>
     <?php endwhile;
     endif; ?>
   </div>
+  <?php derniers_articles(); ?>
 </main>
 
 <?php get_footer(); ?>

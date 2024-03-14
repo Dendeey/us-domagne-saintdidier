@@ -7,8 +7,7 @@
     overflow: hidden;
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, .1);
-    background-image: linear-gradient(to right, $mainYellow 100%, $mainBlue);
-    padding-top: 1rem;
+    background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
 
     .teams__classement-calendrier__navigation {
         display: flex;
@@ -18,7 +17,8 @@
         align-items: center;
         gap: 2rem;
         font-family: $openSans;
-        margin-bottom: 1rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
 
         &>button {
             justify-content: center;
@@ -27,12 +27,12 @@
             height: 3rem;
             text-decoration: none;
             text-align: center;
-            border: 2px solid $mainBlue;
+            border: none;
             color: $mainBlue;
             font-weight: 700;
             font-size: 1.15rem;
             font-family: $openSans;
-            background: linear-gradient(to left, #fff 50%, $mainBlue 50%) right;
+            background: linear-gradient(to left, #fff 50%, $mainYellow 50%) right;
             background-size: 200%;
             transition: .3s ease-out;
             cursor: pointer;
@@ -47,7 +47,6 @@
 
         &>button:hover {
             background-position: left;
-            color: $mainYellow;
         }
     }
 
@@ -57,6 +56,7 @@
         justify-content: center;
         align-items: center;
         overflow: scroll;
+        border-top: solid 3px $mainYellow;
         background-blend-mode: multiply;
         background-color: rgba(0, 0, 0, .1);
         background-image: linear-gradient(to right, $mainBlue 100%, $mainYellow);
@@ -184,6 +184,15 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+
+    .teams__widgets {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+}
+
 @media screen and (min-width: 768px) and (max-width : 1023px) {
     .teams__gallery {
         .teams__gallery__content {
@@ -228,7 +237,7 @@
     .teams__gallery {
         .teams__gallery__content {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1fr);
             gap: 0.5rem;
 
             &>figure {

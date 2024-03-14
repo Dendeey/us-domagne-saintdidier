@@ -47,7 +47,7 @@ get_header();
         <li><button id="staff">Staff</button></li>
       </ul>
     </section>
-    
+
   </section>
 
   <div class="container__behavior">
@@ -72,7 +72,7 @@ get_header();
           if ($garData) {
         ?>
             <figure>
-              <img src="<?php echo $garData['url'] ?>" alt="<?php echo $garData['title'] ?>">
+              <img src="<?php echo $garData['url'] ?>" alt="<?php echo $garData['title'] ?>" loading="lazy">
             </figure>
           <?php } ?>
         <?php } ?>
@@ -100,7 +100,7 @@ get_header();
           if ($defData) {
         ?>
             <figure>
-              <img src="<?php echo $defData['url'] ?>" alt="<?php echo $defData['title'] ?>">
+              <img src="<?php echo $defData['url'] ?>" alt="<?php echo $defData['title'] ?>" loading="lazy">
             </figure>
           <?php } ?>
         <?php } ?>
@@ -129,7 +129,7 @@ get_header();
           if ($milData) {
         ?>
             <figure>
-              <img src="<?php echo $milData['url'] ?>" alt="<?php echo $milData['title'] ?>">
+              <img src="<?php echo $milData['url'] ?>" alt="<?php echo $milData['title'] ?>" loading="lazy">
             </figure>
           <?php } ?>
         <?php } ?>
@@ -158,7 +158,7 @@ get_header();
           if ($attData) {
         ?>
             <figure>
-              <img src="<?php echo $attData['url'] ?>" alt="<?php echo $attData['title'] ?>">
+              <img src="<?php echo $attData['url'] ?>" alt="<?php echo $attData['title'] ?>" loading="lazy">
             </figure>
           <?php } ?>
         <?php } ?>
@@ -187,7 +187,7 @@ get_header();
           if ($staffData) {
         ?>
             <figure>
-              <img src="<?php echo $staffData['url'] ?>" alt="<?php echo $staffData['title'] ?>">
+              <img src="<?php echo $staffData['url'] ?>" alt="<?php echo $staffData['title'] ?>" loading="lazy">
             </figure>
           <?php } ?>
         <?php } ?>
@@ -195,25 +195,25 @@ get_header();
 
     </section>
 
-    <section class="teams__widgets">
-      <?php if ($dataWidgets['widget']['widget1']) { ?>
-        <section id="classement__teams">
-          <h3>Classement</h3>
-          <span class="style__border__bottom"></span>
-          <?php echo $dataWidgets['widget']['widget1']; ?>
-        </section>
-      <?php } ?>
-
-      <?php if ($dataWidgets['widget']['widget2']) { ?>
-        <section id="calendrier-resultats__teams">
-          <h3>Calendrier<span>/</span>Résultats</h3>
-          <span class="style__border__bottom"></span>
-          <?php echo $dataWidgets['widget']['widget2']; ?>
-        </section>
-      <?php } ?>
-    </section>
-
   </div>
+  
+  <section class="teams__widgets">
+    <?php if ($dataWidgets['widget']['widget1']) { ?>
+      <section id="classement__teams">
+        <h3>Classement</h3>
+        <span class="style__border__bottom"></span>
+        <?php echo $dataWidgets['widget']['widget1']; ?>
+      </section>
+    <?php } ?>
+
+    <?php if ($dataWidgets['widget']['widget2']) { ?>
+      <section id="calendrier-resultats__teams">
+        <h3>Calendrier<span>/</span>Résultats</h3>
+        <span class="style__border__bottom"></span>
+        <?php echo $dataWidgets['widget']['widget2']; ?>
+      </section>
+    <?php } ?>
+  </section>
 
 </main>
 <?php

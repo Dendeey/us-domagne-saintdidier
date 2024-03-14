@@ -6,24 +6,29 @@
             <div class="footer__nav__item">
                 <a class="footer__nav__item__title" href="#">Club</a>
                 <nav>
-                    <a href="#">Histoire du club</a>
-                    <a href="#">Bureau & Commissions</a>
-                    <a href="#">Staff</a>
-                    <a href="#">Infrastructures</a>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'burger-club_dropdown',
+                        'container' => 'ul', // afin d'éviter d'avoir une div autour 
+                        'menu_class' => 'burger__club', // ma classe personnalisée  
+                    )); ?>
                 </nav>
             </div>
             <div class="footer__nav__item">
                 <a class="footer__nav__item__title" href="#"><span>é</span>quipes</a>
                 <nav>
-                    <a href="#"><span>é</span>cole de foot</a>
-                    <a href="#">Pôle jeunes</a>
-                    <a href="#">Pôle séniors</a>
-                    <a href="#">Vétérans</a>
+                    <?php wp_nav_menu(array(
+                        'theme_location' => 'burger-equipes_dropdown',
+                        'container' => 'ul', // afin d'éviter d'avoir une div autour 
+                        'menu_class' => 'burger__equipes', // ma classe personnalisée  
+                    )); ?>
                 </nav>
             </div>
             <div class="footer__nav__item">
-                <a class="footer__nav__item__title" href="#">Arbitrage</a>
-                <a class="footer__nav__item__title" href="#">Contact</a>
+                <?php wp_nav_menu(array(
+                    'theme_location' => 'footer-menu',
+                    'container' => 'ul', // afin d'éviter d'avoir une div autour 
+                    'menu_class' => 'footer__burger__menu', // ma classe personnalisée  
+                )); ?>
             </div>
             <div class="footer__nav__item">
                 <h4>Nous suivre</h4>

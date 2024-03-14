@@ -7,50 +7,53 @@ add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
 // Supprimer les styles css des galeries d'images de WordPress
-add_filter( 'use_default_gallery_style', '__return_false' );
+add_filter('use_default_gallery_style', '__return_false');
 
 // Déclarer les scripts et styles avec un Hook
-function usdomagne_register_assets() {
-    
+function usdomagne_register_assets()
+{
+
     // Déclarer jQuery
-    wp_enqueue_script('jquery' );
-    
+    wp_enqueue_script('jquery');
+
     // Déclarer le JS
-	wp_enqueue_script( 
-        'usdomagne', 
-        get_template_directory_uri() . '/assets/js/script.js', 
-        array( 'jquery' ), 
-        '1.0', 
+    wp_enqueue_script(
+        'usdomagne',
+        get_template_directory_uri() . '/assets/js/script.js',
+        array('jquery'),
+        '1.0',
         true
     );
-  	
+
     // Déclarer le fichier CSS à un autre emplacement
-    wp_enqueue_style( 
-        'usdomagne', 
+    wp_enqueue_style(
+        'usdomagne',
         get_template_directory_uri() . '/assets/styles/css/main.css',
-        array(), 
+        array(),
         '1.0'
     );
 }
-add_action( 'wp_enqueue_scripts', 'usdomagne_register_assets' );
+add_action('wp_enqueue_scripts', 'usdomagne_register_assets');
 
-// Déclarer 3 emplacements de menu
-register_nav_menus( array(
-	'main' => 'Menu Principal',
+// Déclarer emplacements de menu
+register_nav_menus(array(
+    'main' => 'Menu Principal',
     'burger-club_dropdown' => 'Menu Club deroulant ',
     'burger-equipes_dropdown' => 'Menu Equipes deroulant',
     'burger-menu' => 'Menu Burger',
-	'footer' => 'Bas de page',
-) );
+    'footer-menu' => 'Menu bas de page',
+    'footer' => 'Bas de page',
+));
 
 // Déclarer une sidebar
-register_sidebar( array(
-	'id' => 'blog-sidebar',
-	'name' => 'Blog',
-) );
+register_sidebar(array(
+    'id' => 'blog-sidebar',
+    'name' => 'Blog',
+));
 
 // Récupérer les données des champs ACF
-function getClubPageData(){
+function getClubPageData()
+{
     $data = [];
     $data['club'] = [];
     $data['club']['image'] = get_field('image');
@@ -59,14 +62,15 @@ function getClubPageData(){
     $data['club']['image1'] = get_field('image_1');
     $data['club']['image2'] = get_field('image_2');
     $data['club']['contenu-principal'] = get_field('contenu_principal');
-    $data['club']['carrousel'] = get_field('carrousel_images',false,false);
+    $data['club']['carrousel'] = get_field('carrousel_images', false, false);
     $data['club']['contenu-secondaire'] = get_field('contenu_secondaire');
     $data['club']['contenu-embarque'] = get_field('contenu_embarque');
 
     return $data;
 }
 
-function getGarTeamsPageData(){
+function getGarTeamsPageData()
+{
     $dataGar = [];
 
     $dataGar['gar'] = [];
@@ -83,7 +87,8 @@ function getGarTeamsPageData(){
     return $dataGar;
 }
 
-function getDefTeamsPageData(){
+function getDefTeamsPageData()
+{
     $dataDef = [];
 
     $dataDef['def'] = [];
@@ -112,7 +117,8 @@ function getDefTeamsPageData(){
     return $dataDef;
 }
 
-function getMilTeamsPageData(){
+function getMilTeamsPageData()
+{
     $dataMil = [];
 
     $dataMil['mil'] = [];
@@ -141,7 +147,8 @@ function getMilTeamsPageData(){
     return $dataMil;
 }
 
-function getAttTeamsPageData(){
+function getAttTeamsPageData()
+{
     $dataAtt = [];
 
     $dataAtt['att'] = [];
@@ -170,7 +177,8 @@ function getAttTeamsPageData(){
     return $dataAtt;
 }
 
-function getStaffTeamsPageData(){
+function getStaffTeamsPageData()
+{
     $dataStaff = [];
 
     $dataStaff['staff'] = [];
@@ -187,7 +195,8 @@ function getStaffTeamsPageData(){
     return $dataStaff;
 }
 
-function getScorencoWidgetsTeamPage(){
+function getScorencoWidgetsTeamPage()
+{
     $dataWidgets = [];
 
     $dataWidgets['widget'] = [];
@@ -198,7 +207,8 @@ function getScorencoWidgetsTeamPage(){
     return $dataWidgets;
 }
 
-function getSinglePostData(){
+function getSinglePostData()
+{
     $dataPost = [];
 
     $dataPost['post'] = [];
@@ -214,21 +224,65 @@ function getSinglePostData(){
     return $dataPost;
 }
 
-function getTemplateDefaultBisData(){
+function getTemplateDefaultBisData()
+{
     $dataBis = [];
 
     $dataBis['bis'] = [];
 
     $dataBis['bis']['mainPicture'] = get_field('image_illustration_page');
     $dataBis['bis']['title1'] = get_field('titre_1');
-    $dataBis['bis']['gallery1'] = get_field('galerie_1',false,false);
+    $dataBis['bis']['gallery1'] = get_field('galerie_1', false, false);
     $dataBis['bis']['title2'] = get_field('titre_2');
-    $dataBis['bis']['gallery2'] = get_field('galerie_2',false,false);
+    $dataBis['bis']['gallery2'] = get_field('galerie_2', false, false);
     $dataBis['bis']['commonContent'] = get_field('contenu_general');
+    $dataBis['bis']['convocs'] = get_field('convocations');
 
     return $dataBis;
 }
 
+// Fonction pour créer la section "Derniers articles" sur les pages d'articles (Single).
 
+function derniers_articles()
+{
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3, // Nombre d'articles récents à afficher
+        'orderby'        => 'date', // Tri par date
+        'order'          => 'DESC', // Dans l'ordre décroissant (du plus récent au plus ancien)
+    );
 
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) {
+        echo '<section class="last__posts">';
+        echo '<h3>Derniers articles</h3>';
+        echo '<ul>';
+        while ($query->have_posts()) {
+            $query->the_post();
+            echo '
+            <li>
+                <a href="' . get_permalink() . '" class="post__link">
+                    <article class="post">
+                        <figure>
+                            ' . get_the_post_thumbnail() . '
+                        </figure>
+                        <div>
+                            <p class="post__meta">
+                                Publié le ' . get_the_time(get_option('date_format')) . '
+                            </p>
+                            <h2>' . get_the_title() . '</h2>
+                        </div>
+                        <span class="post__border__bottom"></span>
+                    </article>
+                </a>
+            </li>
+            ';
+        }
+        echo '</ul>';
+        echo '</section>';
+    }
+
+    wp_reset_postdata();
+}
 

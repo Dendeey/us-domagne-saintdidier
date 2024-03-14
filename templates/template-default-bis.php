@@ -42,32 +42,42 @@ $dataBis = getTemplateDefaultBisData();
     </section>
     <div class="container__behavior">
 
-        <section class="template__bis__first__gallery">
-            <?php if ($dataBis['bis']['title1']) { ?>
+        <?php if ($dataBis['bis']['convocs']) { ?>
+            <section class="template__bis__convocs">
+                <?php echo $dataBis['bis']['convocs'] ?>
+            </section>
+        <?php } ?>
+
+        <?php if ($dataBis['bis']['title1']) { ?>
+            <section class="template__bis__first__gallery">
+
                 <h2><?php echo $dataBis['bis']['title1'] ?>
                     <span class="style__border__bottom"></span>
                 </h2>
 
-            <?php } ?>
-            <?php if ($dataBis['bis']['gallery1']) { ?>
-                <section>
-                    <?php echo $dataBis['bis']['gallery1'] ?>
-                </section>
-            <?php } ?>
-        </section>
 
-        <section class="template__bis__second__gallery">
-            <?php if ($dataBis['bis']['title2']) { ?>
+                <?php if ($dataBis['bis']['gallery1']) { ?>
+                    <section>
+                        <?php echo $dataBis['bis']['gallery1'] ?>
+                    </section>
+                <?php } ?>
+            </section>
+        <?php } ?>
+
+        <?php if ($dataBis['bis']['title2']) { ?>
+            <section class="template__bis__second__gallery">
+
                 <h3><?php echo $dataBis['bis']['title2'] ?>
                     <span class="style__border__bottom"></span>
                 </h3>
-            <?php } ?>
-            <?php if ($dataBis['bis']['gallery2']) { ?>
-                <section>
-                    <?php echo $dataBis['bis']['gallery2'] ?>
-                </section>
-            <?php } ?>
-        </section>
+
+                <?php if ($dataBis['bis']['gallery2']) { ?>
+                    <section>
+                        <?php echo $dataBis['bis']['gallery2'] ?>
+                    </section>
+                <?php } ?>
+            </section>
+        <?php } ?>
 
         <?php if ($dataBis['bis']['commonContent']) { ?>
             <section class="template__bis__common__content">

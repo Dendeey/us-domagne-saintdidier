@@ -71,55 +71,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 otherContent.classList.add('content__dropdown__hidden');
             }
         }
-
-        // dropdownBtnTop.addEventListener('click', function () {
-
-        //     // Fermer tous les sous-menus sauf celui actuellement ouvert
-        //     closeAllDropdownsExcept('content__dropdown__top');
-
-        //     arrowTop.classList.toggle('rotate__180');
-        //     dropdownContentTop.classList.toggle('content__dropdown__hidden');
-
-        // });
-
-        // dropdownBtnBottom.addEventListener('click', function () {
-
-        //     // Fermer tous les sous-menus sauf celui actuellement ouvert
-        //     closeAllDropdownsExcept('content__dropdown__bottom');
-
-        //     arrowBottom.classList.toggle('rotate__180');
-        //     dropdownContentBottom.classList.toggle('content__dropdown__hidden');
-
-        // });
-
-        // function closeAllDropdownsExcept(currentDropdownClass) {
-        //     var allDropdowns = document.querySelectorAll('.content__dropdown__top, .content__dropdown__bottom');
-
-        //     allDropdowns.forEach(function (dropdown) {
-        //         // Fermer tous les sous-menus sauf celui actuellement ouvert
-        //         if (dropdown.classList.contains(currentDropdownClass)) {
-        //             return;
-        //         }
-        //         dropdown.classList.add('content__dropdown__hidden');
-        //     });
-
-        //     var allArrows = document.querySelectorAll('.rotate__180');
-        //     allArrows.forEach(function (arrow) {
-        //         // Réinitialiser toutes les flèches sauf celle du sous-menu actuel
-        //         if (!arrow.classList.contains('rotate__180')) {
-        //             return;
-        //         }
-        //         if (arrow.classList.contains(currentDropdownClass === 'content__dropdown__top' ? 'rotate__180' : 'rotate__180')) {
-        //             return;
-        //         }
-        //         arrow.classList.remove('rotate__180');
-        //     });
-        // }
     }
     dropdownBurgerMenu();
 
     //Liens d'ancrage
     function scrollToAnchorLink() {
+
         scrollTo = (element) => {
             window.scroll({
                 behavior: 'smooth',
@@ -128,33 +85,40 @@ window.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        document.getElementById("classement__teams__anchor").addEventListener('click', () => {
-            scrollTo(document.getElementById("classement__teams"));
-        });
+        if (document.getElementById("classement__teams__anchor", "calendrier-resultats__teams__anchor", "gardiens", "defenseurs", "milieux", "attaquants", "staff")) {
 
-        document.getElementById("calendrier-resultats__teams__anchor").addEventListener('click', () => {
-            scrollTo(document.getElementById("calendrier-resultats__teams"));
-        });
+            document.getElementById("classement__teams__anchor").addEventListener('click', () => {
+                scrollTo(document.getElementById("classement__teams"));
 
-        document.getElementById("gardiens").addEventListener('click', () => {
-            scrollTo(document.getElementById("gardiens__target"));
-        });
+            });
 
-        document.getElementById("defenseurs").addEventListener('click', () => {
-            scrollTo(document.getElementById("defenseurs__target"));
-        });
+            document.getElementById("calendrier-resultats__teams__anchor").addEventListener('click', () => {
+                scrollTo(document.getElementById("calendrier-resultats__teams"));
+            });
 
-        document.getElementById("milieux").addEventListener('click', () => {
-            scrollTo(document.getElementById("milieux__target"));
-        });
+            document.getElementById("gardiens").addEventListener('click', () => {
+                scrollTo(document.getElementById("gardiens__target"));
+            });
 
-        document.getElementById("attaquants").addEventListener('click', () => {
-            scrollTo(document.getElementById("attaquants__target"));
-        });
+            document.getElementById("defenseurs").addEventListener('click', () => {
+                scrollTo(document.getElementById("defenseurs__target"));
+            });
 
-        document.getElementById("staff").addEventListener('click', () => {
-            scrollTo(document.getElementById("staff__target"));
-        });
+            document.getElementById("milieux").addEventListener('click', () => {
+                scrollTo(document.getElementById("milieux__target"));
+            });
+
+            document.getElementById("attaquants").addEventListener('click', () => {
+                scrollTo(document.getElementById("attaquants__target"));
+            });
+
+            document.getElementById("staff").addEventListener('click', () => {
+                scrollTo(document.getElementById("staff__target"));
+            });
+        }
+
+
     }
     scrollToAnchorLink();
+
 });
