@@ -112,6 +112,7 @@ table {
 }
 .homepage__header .header__logo__link .header__logo__img {
   width: 100%;
+  height: 100%;
   align-self: center;
 }
 .homepage__header .sticky__logo {
@@ -722,7 +723,7 @@ table {
   flex-direction: column;
   gap: 2rem;
 }
-.site__footer .footer__nav .footer__nav__item > h4 {
+.site__footer .footer__nav .footer__nav__item > p {
   font-size: 1.2rem;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
@@ -836,7 +837,7 @@ table {
   .site__footer .footer__nav .footer__nav__item .footer__nav__item__title {
     text-align: center;
   }
-  .site__footer .footer__nav .footer__nav__item > h4 {
+  .site__footer .footer__nav .footer__nav__item > p {
     text-align: center;
   }
   .site__footer .footer__nav .footer__nav__item > nav > a {
@@ -860,7 +861,7 @@ table {
   .site__footer .footer__nav .footer__nav__item .footer__nav__item__title {
     text-align: center;
   }
-  .site__footer .footer__nav .footer__nav__item > h4 {
+  .site__footer .footer__nav .footer__nav__item > p {
     text-align: center;
   }
   .site__footer .footer__nav .footer__nav__item > nav .burger__club {

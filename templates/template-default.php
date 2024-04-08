@@ -12,7 +12,9 @@ get_header();
       // var_dump($data);
       ?>
       <figure>
+      <?php if(is_array($data) && isset($data['club']['image']['url']) && isset($data['club']['image']['title'])){ ?>
         <img src="<?php echo $data['club']['image']['url'] ?>" alt="<?php echo $data['club']['image']['title'] ?>">
+      <?php } ?>
       </figure>
     </section>
     <section class="right__section__content">

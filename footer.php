@@ -31,7 +31,7 @@
                 )); ?>
             </div>
             <div class="footer__nav__item">
-                <h4>Nous suivre</h4>
+                <p>Nous suivre</p>
                 <nav class="footer__nav__social__media">
                     <a class="footer__nav__social__media__icon" href="https://www.instagram.com/usdomagne/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i></a>
                     <a class="footer__nav__social__media__icon" href="https://www.facebook.com/usdomagne?locale=fr_FR" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
