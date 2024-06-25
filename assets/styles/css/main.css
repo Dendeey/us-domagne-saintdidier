@@ -523,15 +523,13 @@ table {
 }
 
 .section__actualites {
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to right, #034076 100%, #FDCD11);
+  background-color: #f7f7f7;
 }
 
 .section__prochains__matchs {
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(to right, #FDCD11 100%, #034076);
+  background-image: linear-gradient(to right, #034076 100%, #FDCD11);
 }
 .section__prochains__matchs .item__widget__scorenco__prochains__matchs {
   border-radius: 5px;
@@ -615,73 +613,73 @@ table {
   filter: grayscale(1);
 }
 .section__partenaires .partenaires__items > a:first-of-type {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(2) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAPCLIMAT.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CAPCLIMAT.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(3) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CLOUET.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CLOUET.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(4) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/FERRON.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/FERRON.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(5) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(6) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/VAND.png);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VAND.png);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(7) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/BreizhCola_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/BreizhCola_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(8) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/LaCaveDesSaveurs_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LaCaveDesSaveurs_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(9) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/SoCooc_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/SoCooc_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(10) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Denual_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Denual_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(11) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Groupama_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Groupama_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(12) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/LMConstruction_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LMConstruction_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(13) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/StephanePlaza_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/StephanePlaza_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(14) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Plombreizh_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Plombreizh_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(15) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Motorcraft_logo.png);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Motorcraft_logo.png);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(16) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Safe_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Safe_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(17) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/SuperU_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/SuperU_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(18) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/T&C_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/T&C_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(19) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Tiriault_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Tiriault_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(20) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/Crit_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Crit_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(21) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/KerBtp_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/KerBtp_logo.webp);
 }
 .section__partenaires .partenaires__items > a:nth-of-type(22) {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/LeComptoir_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LeComptoir_logo.webp);
 }
 .section__partenaires .partenaires__items > a:last-of-type {
-  background-image: url(/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/VousFinancer_logo.webp);
+  background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VousFinancer_logo.webp);
 }
 .section__partenaires .partenaires__items > a:hover {
   filter: grayscale(0);
@@ -694,6 +692,28 @@ table {
     background-size: 7rem auto;
   }
 }
+.slider__sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 4rem;
+}
+.slider__sponsors .slider__container__img {
+  width: 75vw;
+}
+.slider__sponsors .slider__container__img > section {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  overflow-x: hidden;
+}
+.slider__sponsors .slider__container__img > section > img {
+  width: 9rem;
+  height: auto;
+}
+
 .site__footer {
   width: 100vw;
   padding-top: 2rem;
@@ -804,8 +824,7 @@ table {
   opacity: 0.5;
 }
 .site__footer .footer__section__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   justify-items: center;
 }
 .site__footer .footer__menu {
@@ -886,12 +905,13 @@ table {
     align-items: center;
     gap: 2.5rem;
   }
-  .site__footer .footer__section__gallery > figure:nth-of-type(2) {
+  .site__footer .footer__section__gallery > figure {
     display: flex;
     justify-content: center;
   }
-  .site__footer .footer__section__gallery > figure:nth-of-type(2) > img {
-    width: 80%;
+  .site__footer .footer__section__gallery > figure > img {
+    width: 20rem;
+    height: auto;
   }
   .site__footer .footer__menu {
     display: flex;
@@ -1159,15 +1179,16 @@ table {
 }
 .post__single .post__single__img {
   max-width: 70rem;
+  padding-bottom: 3rem;
 }
 .post__single .post__single__img > figure > img {
   width: 100%;
-  height: auto;
+  height: 40rem;
   object-fit: cover;
 }
 .post__single .post__single__img > figure > picture > img {
   width: 100%;
-  height: auto;
+  height: 40rem;
   object-fit: cover;
 }
 .post__single .post__single__content {
@@ -1209,6 +1230,15 @@ table {
   text-decoration: underline;
 }
 .post__single .post__single__content .post__single__main__content > p > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 1rem auto;
+}
+.post__single .post__single__content .post__single__main__content > p > picture > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   margin: 1rem auto;
 }
 .post__single .post__single__content .post__single__main__content > ul {
@@ -1333,6 +1363,12 @@ table {
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
 }
+.left__section__image > figure > picture > img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
 
 .right__section__content {
   width: 50%;
@@ -1387,9 +1423,24 @@ table {
   gap: 1.5rem;
   margin-bottom: 2.5rem;
 }
+.right__section__content .right__section__container .right__section__referees > figure {
+  overflow: hidden;
+}
 .right__section__content .right__section__container .right__section__referees > figure > img {
   width: 100%;
   height: auto;
+  transition: transform 0.5s;
+}
+.right__section__content .right__section__container .right__section__referees > figure > img:hover {
+  transform: scale(1.5) translateX(10%);
+}
+.right__section__content .right__section__container .right__section__referees > figure > picture > img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+.right__section__content .right__section__container .right__section__referees > figure > picture > img:hover {
+  transform: scale(1.5) translateX(10%);
 }
 .right__section__content .right__section__container .right__section__main__content {
   margin-bottom: 2.5rem;
@@ -1443,6 +1494,16 @@ table {
   display: grid;
 }
 .right__section__content .right__section__container .right__section__main__content > p > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  justify-self: center;
+  margin-top: 1rem;
+}
+.right__section__content .right__section__container .right__section__main__content > p > picture > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   justify-self: center;
   margin-top: 1rem;
 }
@@ -1502,16 +1563,32 @@ table {
 .right__section__content .right__section__container .right__section__gallery .right__section__gallery__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 2.5rem;
+  justify-items: center;
+  align-items: center;
+}
+.right__section__content .right__section__container .right__section__gallery .right__section__gallery__content > picture {
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+.right__section__content .right__section__container .right__section__gallery .right__section__gallery__content > picture > img {
+  width: 10rem;
+  height: auto;
+  object-fit: cover;
+}
+.right__section__content .right__section__container .right__section__gallery .right__section__gallery__content > img {
+  width: 10rem;
+  height: auto;
+  object-fit: cover;
 }
 .right__section__content .right__section__container .right__section__second__content {
   margin-bottom: 2.5rem;
 }
 .right__section__content .right__section__container .right__section__second__content > p {
   font-size: 1.15rem;
+  color: #595959;
   margin-bottom: 1rem;
   text-align: justify;
 }
@@ -1523,6 +1600,11 @@ table {
     position: static;
   }
   .left__section__image > figure > img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  .left__section__image > figure > picture > img {
     width: 100%;
     height: 50%;
     object-fit: cover;
@@ -1566,11 +1648,12 @@ table {
 .teams__navigation .teams__classement-calendrier__navigation > button {
   justify-content: center;
   align-items: center;
-  width: 25rem;
+  width: 17rem;
   height: 3rem;
   text-decoration: none;
   text-align: center;
-  border: none;
+  border-radius: 20rem;
+  border: 1px solid;
   color: #034076;
   font-weight: 700;
   font-size: 1.15rem;
@@ -1581,6 +1664,7 @@ table {
   cursor: pointer;
   display: flex;
   flex-wrap: wrap;
+  text-transform: uppercase;
 }
 .teams__navigation .teams__classement-calendrier__navigation > button > span {
   padding-left: 0.5rem;
@@ -1651,8 +1735,7 @@ table {
 .teams__gallery .teams__gallery__content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 2rem;
-  row-gap: 6rem;
+  gap: 2rem;
 }
 .teams__gallery .teams__gallery__content > figure {
   overflow: hidden;
@@ -1710,12 +1793,19 @@ table {
   .teams__gallery .teams__gallery__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
-    row-gap: 6rem;
+    gap: 1rem;
   }
   .teams__gallery .teams__gallery__content > figure > img {
     width: 100%;
     height: auto;
+  }
+  .teams__gallery .teams__gallery__content > figure > picture > img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+  }
+  .teams__gallery .teams__gallery__content > figure > picture > img:hover {
+    transform: scale(1.5) translateX(10%);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1734,14 +1824,32 @@ table {
   .teams__navigation .teams__gallery__navigation > ul {
     gap: 1rem;
   }
+  .teams__gallery {
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+  }
   .teams__gallery .teams__gallery__content {
     display: grid;
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
+    width: 95vw;
   }
   .teams__gallery .teams__gallery__content > figure > img {
     width: 100%;
     height: auto;
+  }
+  .teams__gallery .teams__gallery__content > figure > picture > img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+  }
+  .teams__gallery .teams__gallery__content > figure > picture > img:hover {
+    transform: scale(1.5) translateX(10%);
+  }
+  .teams__widgets > section {
+    padding-top: 3rem;
   }
 }
 .header__template__bis {

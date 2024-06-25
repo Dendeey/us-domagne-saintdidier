@@ -1,3 +1,32 @@
+.slider__sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 4rem;
+
+  .slider__title {
+    & > h1 {
+    }
+  }
+
+  .slider__container__img {
+    width: 75vw;
+    & > section {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      overflow-x: hidden;
+
+      & > img {
+        width: 9rem;
+        height: auto;
+      }
+    }
+  }
+}
+
 .site__footer {
   width: 100vw;
   padding-top: 2rem;
@@ -136,8 +165,7 @@
   }
 
   .footer__section__gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-items: center;
   }
 
@@ -247,12 +275,13 @@
       align-items: center;
       gap: 2.5rem;
 
-      & > figure:nth-of-type(2) {
+      & > figure {
         display: flex;
         justify-content: center;
 
         & > img {
-          width: 80%;
+          width: 20rem;
+          height: auto;
         }
       }
     }

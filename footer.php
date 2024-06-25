@@ -1,3 +1,27 @@
+    <section class="slider__sponsors">
+        <section class="slider__title">
+            <h1>Partenaires</h1>
+        </section>
+        <section class="slider__container__img">
+            <section>
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+            </section>
+        </section>
+    </section>
     <footer class="site__footer">
         <a class="footer__logo" href="<?php echo home_url('/'); ?>">
             <img class="footer__logo__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_usd.png" alt="Logo footer">
@@ -40,13 +64,7 @@
         </div>
         <div class="footer__section__gallery">
             <figure>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/echarpe_usd.png" alt="Echarpe usd">
-            </figure>
-            <figure>
                 <img class="footer__section__img__item" src="<?php echo get_template_directory_uri(); ?>/assets/img/slogan_usd_yellowborder.png" alt="Slogan usd">
-            </figure>
-            <figure>
-                <img class="footer__section__img__item" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo_district.png" alt="Logo district">
             </figure>
         </div>
         <?php wp_nav_menu(array(

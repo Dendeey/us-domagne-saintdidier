@@ -14,7 +14,7 @@
                   <span><i class="fa-solid fa-minus"></i></span>
                 </li>
                 <li>
-                  <a href="http://localhost/usdomagne_website/wordpress-6.3.1/wordpress/actualites/">Actualités</a>
+                  <a href="http://localhost/usdomagne/actualites/">Actualités</a>
                 </li>
                 <li>
                   <span><i class="fa-solid fa-minus"></i></span>
