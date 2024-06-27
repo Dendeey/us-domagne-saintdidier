@@ -131,12 +131,4 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
   scrollToAnchorLink();
-
-  //Fonction slider des partenaires
-  function sponsorSlider() {
-    //Stocker toutes les images du slider
-    let img = document.getElementsByClassName("slider__img");
-    console.log("Console :", img);
-  }
-  sponsorSlider();
 });

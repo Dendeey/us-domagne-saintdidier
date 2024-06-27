@@ -2,23 +2,31 @@
         <section class="slider__title">
             <h1>Partenaires</h1>
         </section>
-        <section class="slider__container__img">
-            <section>
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
-                <img class="slider__img" src="/usdomagne_website/wordpress-6.3.1/wordpress/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+        <section class="slider__container">
+            <section class="slider__container__img">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/BreizhCola_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CAFPI.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CAPCLIMAT.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/CLOUET.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Crit_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Denual_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/FERRON.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Groupama_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/KerBtp_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LaCaveDesSaveurs_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LeComptoir_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/LMConstruction_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Motorcraft_logo.png" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/PLANCHAIS.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Plombreizh_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Safe_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/SoCooc_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/StephanePlaza_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/SuperU_logo.png" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/T&C_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/Tiriault_logo.webp" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VAND.png" alt="Partenaire">
+                <img class="slider__img" src="/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VousFinancer_logo.webp" alt="Partenaire">
             </section>
         </section>
     </section>

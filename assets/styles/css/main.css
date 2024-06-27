@@ -692,6 +692,14 @@ table {
     background-size: 7rem auto;
   }
 }
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .slider__sponsors {
   display: flex;
   flex-direction: column;
@@ -700,18 +708,43 @@ table {
   gap: 4rem;
   padding-bottom: 4rem;
 }
-.slider__sponsors .slider__container__img {
-  width: 75vw;
-}
-.slider__sponsors .slider__container__img > section {
+.slider__sponsors .slider__container {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
-  overflow-x: hidden;
+  flex-wrap: nowrap;
+  width: 75vw;
+  position: relative;
 }
-.slider__sponsors .slider__container__img > section > img {
-  width: 9rem;
+.slider__sponsors .slider__container .slider__container__img {
+  display: flex;
+  flex-direction: row;
+  animation: 10s slide infinite linear;
+}
+.slider__sponsors .slider__container .slider__container__img .slider__img {
+  width: 12rem;
   height: auto;
+  margin: 0 30px;
+}
+.slider__sponsors .slider__container:hover .slider__container__img {
+  animation-play-state: paused;
+}
+.slider__sponsors .slider__container:before,
+.slider__sponsors .slider__container:after {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+.slider__sponsors .slider__container:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.slider__sponsors .slider__container:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
 .site__footer {
@@ -2079,13 +2112,11 @@ html body {
   font-family: "Open Sans", sans-serif;
 }
 @font-face {
-  html body {
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
-    font-display: swap;
-  }
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap);
+  font-display: swap;
 }
 html #overlay {
   display: none;
