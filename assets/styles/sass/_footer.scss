@@ -1,12 +1,3 @@
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
 .slider__sponsors {
   display: flex;
   flex-direction: column;
@@ -15,47 +6,59 @@
   gap: 4rem;
   padding-bottom: 4rem;
 
-  .slider__container {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 75vw;
-    position: relative;
-    .slider__container__img {
-      display: flex;
-      flex-direction: row;
-      animation: 10s slide infinite linear;
+  .image-container {
+    overflow-x: hidden;
+    max-width: 75vw;
 
-      .slider__img {
-        width: 12rem;
-        height: auto;
-        margin: 0 30px;
+    .image-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(
+        (100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view)
+      );
+      grid-gap: 1.5rem;
+      position: relative;
+      left: 0;
+      transition: 0.3s;
+
+      & > div {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        & > img {
+          width: 150px;
+          height: auto;
+          object-fit: cover;
+        }
       }
     }
   }
-  .slider__container:hover .slider__container__img {
-    animation-play-state: paused;
-  }
-  .slider__container:before,
-  .slider__container:after {
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-  }
 
-  .slider__container:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
+  // .slider__container {
+  //   min-width: 100vw;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
 
-  .slider__container:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
+  //   .slider__container-items {
+  //     overflow: hidden;
+  //     max-width: 75vw;
+  //     display: flex;
+  //     flex-direction: row;
+  //     gap: 2rem;
+
+  //     .slider__container-item {
+  //       display: grid;
+  //       justify-content: center;
+  //       align-items: center;
+
+  //       & > img {
+  //         width: 180px;
+  //         height: auto;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .site__footer {
