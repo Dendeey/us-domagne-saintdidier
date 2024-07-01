@@ -33,7 +33,12 @@
       height: 9rem;
       background-size: 9rem auto;
       background-repeat: no-repeat;
+      background-position: center;
       transition-duration: 0.3s;
+      filter: grayscale(0);
+    }
+
+    & > a:hover {
       filter: grayscale(1);
     }
 
@@ -127,10 +132,6 @@
 
     & > a:last-of-type {
       background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VousFinancer_logo.webp);
-    }
-
-    & > a:hover {
-      filter: grayscale(0);
     }
   }
 }

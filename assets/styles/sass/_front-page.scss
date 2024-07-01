@@ -23,6 +23,18 @@
   }
 }
 
+.wpr-grid-image-wrap {
+  filter: brightness(0.7);
+}
+
+.wpr-grid-media-hover {
+  .inner-block {
+    & > a {
+      filter: none !important;
+    }
+  }
+}
+
 .section__actualites {
   background-color: $grey;
 }

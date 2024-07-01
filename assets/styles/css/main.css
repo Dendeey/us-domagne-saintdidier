@@ -522,6 +522,14 @@ table {
   object-fit: cover;
 }
 
+.wpr-grid-image-wrap {
+  filter: brightness(0.7);
+}
+
+.wpr-grid-media-hover .inner-block > a {
+  filter: none !important;
+}
+
 .section__actualites {
   background-color: #f7f7f7;
 }
@@ -609,7 +617,11 @@ table {
   height: 9rem;
   background-size: 9rem auto;
   background-repeat: no-repeat;
+  background-position: center;
   transition-duration: 0.3s;
+  filter: grayscale(0);
+}
+.section__partenaires .partenaires__items > a:hover {
   filter: grayscale(1);
 }
 .section__partenaires .partenaires__items > a:first-of-type {
@@ -681,9 +693,6 @@ table {
 .section__partenaires .partenaires__items > a:last-of-type {
   background-image: url(/usdomagne/wp-content/themes/usdomagne/assets/img/partenaires/VousFinancer_logo.webp);
 }
-.section__partenaires .partenaires__items > a:hover {
-  filter: grayscale(0);
-}
 
 @media screen and (max-width: 767px) {
   .section__partenaires .partenaires__items > a {
@@ -692,38 +701,6 @@ table {
     background-size: 7rem auto;
   }
 }
-.slider__sponsors {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  padding-bottom: 4rem;
-}
-.slider__sponsors .image-container {
-  overflow-x: hidden;
-  max-width: 75vw;
-}
-.slider__sponsors .image-container .image-wrapper {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 1.5rem * (var(--per-view) - 1)) / var(--per-view));
-  grid-gap: 1.5rem;
-  position: relative;
-  left: 0;
-  transition: 0.3s;
-}
-.slider__sponsors .image-container .image-wrapper > div {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-.slider__sponsors .image-container .image-wrapper > div > img {
-  width: 150px;
-  height: auto;
-  object-fit: cover;
-}
-
 .site__footer {
   width: 100vw;
   padding-top: 2rem;
