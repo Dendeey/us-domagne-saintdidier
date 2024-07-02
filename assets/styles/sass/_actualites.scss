@@ -19,10 +19,11 @@
 
         & > figure {
           overflow: hidden;
+          height: 250px;
 
           & > img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
           }
@@ -30,15 +31,11 @@
           & > img:hover {
             transform: scale(1.05);
           }
-        }
-
-        & > figure {
-          overflow: hidden;
 
           & > picture {
             & > img {
               width: 100%;
-              height: 250px;
+              height: 100%;
               object-fit: cover;
               transition: transform 0.5s;
             }
@@ -187,10 +184,6 @@
             & > img:hover {
               transform: scale(1.05);
             }
-          }
-
-          & > figure {
-            overflow: hidden;
 
             & > picture {
               & > img {
@@ -317,21 +310,20 @@
   padding-bottom: 4rem;
 
   .post__single__img {
-    max-width: 70rem;
     padding-bottom: 3rem;
+    display: grid;
     & > figure {
+      justify-self: center;
       & > img {
-        width: 100%;
-        height: 40rem;
+        width: 850px;
+        height: 450px;
         object-fit: cover;
       }
-    }
 
-    & > figure {
       & > picture {
         & > img {
-          width: 100%;
-          height: 40rem;
+          width: 850px;
+          height: 450px;
           object-fit: cover;
         }
       }
@@ -468,9 +460,33 @@
       column-gap: 1.5rem;
     }
   }
+
+  .post__single {
+    .post__single__img {
+      & > figure {
+        & > img {
+          width: 650px;
+          height: 350px;
+          object-fit: cover;
+        }
+
+        & > picture {
+          & > img {
+            width: 650px;
+            height: 350px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .container__behavior {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .actualites__content {
     .actualites__content__container {
       display: grid;
@@ -480,6 +496,7 @@
   }
 
   .post__single__header__content {
+    padding: 0 1rem;
     .post__single__header__fixed {
       & > h1 {
         font-size: 2rem;
@@ -492,8 +509,26 @@
   }
 
   .post__single {
+    .post__single__img {
+      padding: 0 1rem 2rem;
+      & > figure {
+        & > img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+
+        & > picture {
+          & > img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
     .post__single__content {
-      max-width: 100%;
+      padding: 0 1rem;
     }
 
     .post__single__gallery {
